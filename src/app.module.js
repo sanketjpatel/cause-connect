@@ -6,6 +6,7 @@
         'ionic',
         'ionic.service.core', // needed for ionic analytics
         'ionic.service.analytics',
+        'ionic.cloud',
         'ngCordova',
         'tmh.dynamicLocale',
         'pascalprecht.translate',
@@ -22,7 +23,28 @@
         .constant('DefaultLanguage', 'en-US')
         .config(translateConfig)
         .config(appConfig)
-        .config(ionicConfig);
+        .config(ionicConfig)
+        .config(pushConfig);
+
+    function pushConfig($ionicCloudProvider) {
+        $ionicCloudProvider.init({
+            "core": {
+                "app_id": "a7f3e6f0"
+            },
+            "push": {
+                "sender_id": "270726488156",
+                "pluginConfig": {
+                    "ios": {
+                        "badge": true,
+                        "sound": true
+                    },
+                    "android": {
+                        "iconColor": "#343434"
+                    }
+                }
+            }
+        });
+    }
 
     // @ngInject
     function translateConfig($translateProvider, DefaultLanguage) {
