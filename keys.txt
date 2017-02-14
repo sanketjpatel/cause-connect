@@ -1,12 +1,12 @@
-google api key : 
-sender id: 
-generate keystore: keytool -genkey -v -keystore nexstar.keystore -alias nexstar -keyalg RSA -keysize 2048 -validity 10000
+google api key :
+sender id:
+generate keystore: keytool -genkey -v -keystore krypton.keystore -alias krypton -keyalg RSA -keysize 2048 -validity 10000
 
 steps to build android :
-
+0. gulp staging; //minifies all the stuff in www folder
 1. cordova build --release android
-2. jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ./nexstar.keystore ./platforms/android/build/outputs/apk/android-release-unsigned.apk nexstar
-3. ~/Library/Android/sdk/build-tools/23.0.3/zipalign -v 4 ./platforms/android/build/outputs/apk/android-release-unsigned.apk nexstar.apk
+2. jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ./krypton.keystore ./platforms/android/build/outputs/apk/android-release-unsigned.apk krypton
+3. ~/Library/Android/sdk/build-tools/23.0.3/zipalign -v 4 ./platforms/android/build/outputs/apk/android-release-unsigned.apk krypton.apk
 
 
 
