@@ -1,10 +1,10 @@
 {
-  "name": "App Name here",
+  "name": "FamousFive",
   "version": "0.0.0",
   "authors": [
-    "Your Name <your email>"
+    "Shaival Jason <schettipally@egen.solutions>"
   ],
-  "description": "App Name here",
+  "description": "FamousFive",
   "license": "private",
   "dependencies": {
     "angular": "~1.4.5",
