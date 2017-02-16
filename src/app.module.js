@@ -17,14 +17,20 @@
 
         // services
         'app.auth',
-        'app.login'
+        'causeConnect.tabs',
+        'causeConnect.home',
+        'causeConnect.contribute',
+        'causeConnect.seek'
     ])
         .constant('AvailableLanguages', ['en-US', 'ru-RU', 'el-GR'])
         .constant('DefaultLanguage', 'en-US')
         .config(translateConfig)
         .config(appConfig)
         .config(ionicConfig)
-        .config(pushConfig);
+        .config(pushConfig)
+        .config(function($ionicConfigProvider) {
+            $ionicConfigProvider.tabs.position('bottom');
+        });
 
     function pushConfig($ionicCloudProvider) {
         $ionicCloudProvider.init({
@@ -55,12 +61,13 @@
         $translateProvider.preferredLanguage(DefaultLanguage);
     }
     // @ngInject
-    function appConfig($stateProvider, $urlRouterProvider) {
+    function appConfig($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+            $ionicConfigProvider.tabs.position('bottom');
         $stateProvider
-            .state('app', {
-                url: '/app',
+            .state('causeConnect', {
+                url: '/causeConnect',
                 abstract: true,
-                template: '<ion-nav-view class="app" name="appView"></ion-nav-view>'
+                templateUrl : 'features/tabs/tabs.html'
             });
 
         $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -69,7 +76,7 @@
             if (user) {
                 // go to home
             } else {
-                state.go('app.login');
+                state.go('causeConnect.home');
             }
             return $location.path();
         });

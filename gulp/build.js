@@ -100,6 +100,7 @@ gulp.task('other', ['add-ionic'], function () {
 
     return gulp.src([
         path.join(conf.paths.src, '/**/*'),
+        path.join(conf.paths.src, '/**/*.html'),
         path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss}')
     ])
         .pipe(fileFilter)
