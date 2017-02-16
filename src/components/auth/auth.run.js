@@ -13,7 +13,7 @@
             var requiresAuthentication = _.get(toState, 'data.authenticate') !== false;
             if (requiresAuthentication && !AuthService.isAuthenticated()) {
                 event.preventDefault();
-                $state.go('app.login');
+                $state.go('causeConnect.home');
             }
         });
     }

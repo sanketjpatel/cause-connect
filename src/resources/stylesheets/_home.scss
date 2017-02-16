@@ -1,3 +1,74 @@
 .home {
+    .scroll-content {
+        background-image:url('http://munark.com/wp-content/uploads/2015/04/ngos.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
 
+    .data {
+        border-radius: 10px;
+        border: solid 1px gray;
+        background-color: rgba(67, 100, 162, 0.85);
+        opacity: 0.9;
+        transform: translate3d(0px, 0px, 0px) scale(1);
+        padding: 10px;
+        width: 100%;
+    }
+
+    a {
+        color: #33cd5f;
+    }
+
+    color: white;
+}
+
+.seek {
+    .scroll-content {
+        background-image:url('http://www.geventm.com/wp-content/uploads/2014/02/teambuilding-main.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+
+    .data {
+        border-radius: 10px;
+        border: solid 1px gray;
+        background-color: dimgrey;
+        opacity: 0.9;
+        transform: translate3d(0px, 0px, 0px) scale(1);
+        padding: 10px;
+        width: 100%;
+    }
+
+    a {
+        color: #ffc900;
+    }
+
+    color: white;
+}
+
+.contribute {
+    .scroll-content {
+        background-image:url('http://www.geventm.com/wp-content/uploads/2014/02/teambuilding-main.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+
+    .data {
+        border-radius: 10px;
+        border: solid 1px gray;
+        background-color: dimgrey;
+        opacity: 0.9;
+        transform: translate3d(0px, 0px, 0px) scale(1);
+        padding: 10px;
+        width: 100%;
+    }
+
+    a {
+        color: #ffc900;
+    }
+
+    color: white;
 }
