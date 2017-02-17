@@ -12,7 +12,8 @@
                 views: {
                     'seekView': {
                         templateUrl: 'features/seek/seek.html',
-                        controller: 'SeekController'
+                        controller: 'SeekController',
+                        controllerAs: 'SeekVm'
                     }
                 },
                 data: {

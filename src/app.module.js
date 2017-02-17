@@ -19,7 +19,8 @@
         'app.auth',
         'causeConnect.tabs',
         'causeConnect.contribute',
-        'causeConnect.seek'
+        'causeConnect.seek',
+        'causeConnect.events'
     ])
         .constant('AvailableLanguages', ['en-US', 'ru-RU', 'el-GR'])
         .constant('DefaultLanguage', 'en-US')
@@ -60,8 +61,7 @@
         $translateProvider.preferredLanguage(DefaultLanguage);
     }
     // @ngInject
-    function appConfig($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-            $ionicConfigProvider.tabs.position('bottom');
+    function appConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('causeConnect', {
                 url: '/causeConnect',
