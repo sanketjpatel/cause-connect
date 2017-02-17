@@ -10,7 +10,7 @@
         $rootScope.$on('$stateChangeStart', function onStateChange(event, toState) {
             // By default, every state requires authentication.
             // State must explicitly set authenticate to `false` to disable
-            var requiresAuthentication = _.get(toState, 'data.authenticate') !== false;
+            var requiresAuthentication = _.get(toState, ['data', 'authenticate']) !== false;
             if (requiresAuthentication && !AuthService.isAuthenticated()) {
                 event.preventDefault();
                 $state.go('causeConnect.contribute');

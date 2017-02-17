@@ -17,8 +17,9 @@
 
         // services
         'app.auth',
-        'causeConnect.tabs',
         'causeConnect.contribute',
+        'causeConnect.tabs',
+        'causeConnect.login',
         'causeConnect.seek',
         'causeConnect.events'
     ])
@@ -66,7 +67,9 @@
             .state('causeConnect', {
                 url: '/causeConnect',
                 abstract: true,
-                templateUrl : 'features/tabs/tabs.html'
+                templateUrl: 'features/tabs/tabs.html',
+                controller: 'TabsController',
+                controllerAs: 'tabsVm'
             });
 
         $urlRouterProvider.otherwise(function ($injector, $location) {

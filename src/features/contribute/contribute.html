@@ -3,7 +3,7 @@
         <!--<ion-content class="card-background-page">-->
 
         <!--<ion-list>
-            <ion-item ng-repeat="data in ContributeVm.categorizedEvents track by $index">
+            <ion-item ng-repeat="data in ctbVm.categorizedEvents track by $index">
                 <ion-thumbnail item-left>
                     <img src="http://www.planwallpaper.com/static/images/Fall-wallpaper-1366x768-HD-wallpaper.jpg"/>
                 </ion-thumbnail>
@@ -13,7 +13,7 @@
             </ion-item>
         </ion-list>
         <div class="categories">
-            <ion-card ng-repeat="data in ContributeVm.categorizedEvents track by $index">
+            <ion-card ng-repeat="data in ctbVm.categorizedEvents track by $index">
                 <img src="http://www.planwallpaper.com/static/images/Fall-wallpaper-1366x768-HD-wallpaper.jpg"/>
                 <div class="card-title">{{data.category}}</div>
                 <div class="card-subtitle">{{data.eventCount}}</div>
@@ -34,7 +34,7 @@
                 </p>
             </ion-card-content>
         </ion-card>
-        <ion-card class="event-list" ng-repeat="event in ContributeVm.events track by $index">
+        <ion-card class="event-list" ng-repeat="event in ctbVm.events track by $index">
             <ion-item class="info">
                 <h1 ng-click="detailsPage()">{{event.name}}</h1>
                 <p>Organized By: {{event.organizer}}</p>
@@ -50,5 +50,6 @@
                 </div>
             </ion-card-content>
         </ion-card>
+        <button ng-click="ctbVm.logout()">Logout!</button>
     </ion-content>
 </ion-view>

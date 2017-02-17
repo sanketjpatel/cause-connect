@@ -1,15 +1,25 @@
     (function(angular) {
         'use strict';
         angular
-            .module('causeConnect.tabs')
+            .module('causeConnect.tabs', [])
             .controller('TabsController', TabsController);
 
         // @ngInject
-        function TabsController($window, AuthService, $state, $ionicPush) {
+        function TabsController($window, AuthService, $state, $ionicPush, $ionicTabsDelegate) {
             var tabsVm = this;
 
+            tabsVm.indexStateMap = [
+                'causeConnect.contribute',
+                'causeConnect.seek'
+            ];
             //tabsVm.validateLogin = validateLogin;
             tabsVm.registerForPush = registerForPush;
+            tabsVm.navigate = navigate;
+
+            function navigate(index) {
+                $ionicTabsDelegate.select(index);
+                $state.go(tabsVm.indexStateMap[index]);
+            }
 
             /*function validateLogin() {
                 AuthService.authenticate(tabsVm.email, tabsVm.password)

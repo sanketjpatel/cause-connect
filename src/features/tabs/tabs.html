@@ -1,17 +1,14 @@
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
     <!-- Contribute Tab -->
-    <ion-tab title="Contribute" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" href="#/causeConnect/contribute">
-        <ion-nav-view name="contributeView"></ion-nav-view>
+    <ion-tab title="Contribute" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" ng-click="tabsVm.navigate(0)">
+        <ion-nav-view></ion-nav-view>
     </ion-tab>
 
     <!-- Seek Tab -->
-    <ion-tab title="Seek Help" icon-off="ion-ios-glasses-outline" icon-on="ion-ios-glasses" href="#/causeConnect/seek">
-        <ion-nav-view name="seekView"></ion-nav-view>
+    <ion-tab title="Seek Help" icon-off="ion-ios-glasses-outline" icon-on="ion-ios-glasses" ng-click="tabsVm.navigate(1)">
+        <ion-nav-view></ion-nav-view>
     </ion-tab>
-
-
-
 </ion-tabs>
 
 <!--<ion-view class="tabs" cache-view="false">

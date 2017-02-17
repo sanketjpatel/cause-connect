@@ -3,7 +3,7 @@
 
     angular.module('causeConnect.contribute')
         .controller('ContributeController', contributeController);
-    function contributeController(eventService) {
+    function contributeController(eventService, AuthTokenService) {
         var vm = this;
 
         init();
@@ -17,6 +17,10 @@
                 .then(function(data) {
                     vm.events = data;
                 });
+        }
+
+        vm.logout = function () {
+            AuthTokenService.removeToken();
         }
     }
 })(angular);

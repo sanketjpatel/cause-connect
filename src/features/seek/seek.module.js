@@ -1,4 +1,4 @@
-(function(angular) {
+(function (angular) {
     'use strict';
     angular
         .module('causeConnect.seek', [])
@@ -9,13 +9,9 @@
         $stateProvider
             .state('causeConnect.seek', {
                 url: '/seek',
-                views: {
-                    'seekView': {
-                        templateUrl: 'features/seek/seek.html',
-                        controller: 'SeekController',
-                        controllerAs: 'SeekVm'
-                    }
-                },
+                templateUrl: 'features/seek/seek.html',
+                controller: 'SeekController',
+                controllerAs: 'seekVm',
                 data: {
                     authenticate: false
                 }
