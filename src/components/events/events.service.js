@@ -6,7 +6,7 @@
         var self = this;
         self.events = [
             {
-                id: '1',
+                id: 1,
                 name: 'Feed the starving',
                 date: '01-13-17',
                 organizer: 'Krypton',
@@ -18,7 +18,7 @@
                 eventGoal: '$5000'
             },
             {
-                id: '2',
+                id: 2,
                 name: 'Care and Feed Stray Dogs',
                 date: '01-13-17',
                 organizer: 'Krypton',
@@ -30,7 +30,7 @@
                 eventGoal: '$5000000'
             },
             {
-                id: '3',
+                id: 3,
                 name: 'Keep Your Desks Clean',
                 date: '01-13-17',
                 organizer: 'Nitika',
@@ -42,7 +42,7 @@
                 eventGoal: '$5000000'
             },
             {
-                id: '4',
+                id: 4,
                 name: 'Free Food Fridays',
                 date: '01-13-17',
                 organizer: 'Mohit',
@@ -54,7 +54,7 @@
                 eventGoal: '$15000'
             },
             {
-                id: '5',
+                id: 5,
                 name: 'Buy a Burger',
                 date: '01-13-17',
                 organizer: 'Krypton',
@@ -71,6 +71,7 @@
         self.findEventByName = findEventByName;
         self.findEventById = findEventById;
         self.getCategorizedEvents = getCategorizedEvents;
+        self.editEventById = editEventById;
         // Event Model
 
         function addEvent(event) {
@@ -80,7 +81,7 @@
 
             self.events.push(event);
 
-            return self.events;
+            return Promise.resolve(self.events);
         }
 
         function getAllEvents() {
@@ -112,6 +113,16 @@
                 });
             });
             return Promise.resolve(categorizedData);
+        }
+
+        function editEventById(id, newEvent) {
+            var event = _.find(self.events, { 'id': id });
+            var index = _.indexOf(self.events, event);
+            if(!_.isUndefined(index)) {
+                self.events[index] = newEvent;
+                return self.events[index]
+            }
+
         }
     }
 })(angular, _);
