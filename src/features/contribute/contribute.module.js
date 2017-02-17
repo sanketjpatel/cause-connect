@@ -10,12 +10,14 @@
                 views: {
                     'contributeView': {
                         templateUrl: 'features/contribute/contribute.html',
-                        controller: 'ContributeController'
+                        controller: 'ContributeController',
+                        controllerAs: 'contributeVm'
                     }
                 },
                 data: {
                     authenticate: false
                 }
             })
+
     }
 })(angular);
