@@ -18,7 +18,6 @@
         // services
         'app.auth',
         'causeConnect.tabs',
-        'causeConnect.home',
         'causeConnect.contribute',
         'causeConnect.seek'
     ])
@@ -76,7 +75,7 @@
             if (user) {
                 // go to home
             } else {
-                state.go('causeConnect.home');
+                state.go('causeConnect.contribute');
             }
             return $location.path();
         });

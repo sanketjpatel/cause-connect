@@ -8,6 +8,8 @@
         function TabsController($window, AuthService, $state, $ionicPush) {
             var tabsVm = this;
 
+            tabsVm.isSeeker = false;
+
             //tabsVm.validateLogin = validateLogin;
             tabsVm.registerForPush = registerForPush;
 
