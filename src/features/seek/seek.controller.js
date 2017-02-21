@@ -13,8 +13,9 @@
         vm.$onInit();
 
         function $onInit () {
+
+            // TODO: Check if authenticated
             if (!AuthService.isAuthenticated()) {
-                console.log('Navigating to the login screen');
                 $state.go('causeConnect.login');
             }
         }

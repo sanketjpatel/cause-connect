@@ -7,6 +7,7 @@
         'ionic.service.core', // needed for ionic analytics
         'ionic.service.analytics',
         'ionic.cloud',
+        'firebase',
         'ngCordova',
         'tmh.dynamicLocale',
         'pascalprecht.translate',
@@ -20,6 +21,7 @@
         'causeConnect.contribute',
         'causeConnect.tabs',
         'causeConnect.login',
+        'causeConnect.signup',
         'causeConnect.seek',
         'causeConnect.events',
         'causeConnect.eventDetail'
@@ -33,6 +35,24 @@
         .config(function($ionicConfigProvider) {
             $ionicConfigProvider.tabs.position('bottom');
         });
+
+    //function firebaseConfig() {
+    //
+    //    console.log('initializing firebase');
+    //    // Initialize Firebase
+    //    //var config = {
+    //    //    apiKey: "AIzaSyBL8zTJ9rLHv--v83oyeNvE2j0_9vR8iEY",
+    //    //    authDomain: "cause-connect.firebaseapp.com",
+    //    //    databaseURL: "https://cause-connect.firebaseio.com",
+    //    //    storageBucket: "cause-connect.appspot.com",
+    //    //    messagingSenderId: "786118996913"
+    //    //};
+    //    //console.log('initializing firebase');
+    //    //
+    //    //firebase.initializeApp(config);
+    //    //
+    //    //console.log('initialized firebase');
+    //}
 
     function pushConfig($ionicCloudProvider) {
         $ionicCloudProvider.init({
@@ -74,13 +94,10 @@
             });
 
         $urlRouterProvider.otherwise(function ($injector, $location) {
-            var user = false;
             var state = $injector.get('$state');
-            if (user) {
-                // go to home
-            } else {
-                state.go('causeConnect.contribute');
-            }
+
+            state.go('causeConnect.contribute');
+
             return $location.path();
         });
     }
