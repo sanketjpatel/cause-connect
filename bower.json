@@ -1,10 +1,10 @@
 {
-  "name": "FamousFive",
+  "name": "CauseConnect",
   "version": "0.0.0",
   "authors": [
     "Shaival Jason <schettipally@egen.solutions>"
   ],
-  "description": "FamousFive",
+  "description": "Connecting people for a social cause",
   "license": "private",
   "dependencies": {
     "angular": "~1.4.5",

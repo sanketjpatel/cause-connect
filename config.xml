@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="io.egen.restaurant" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>FamousFive</name>
+  <name>CauseConnect</name>
   <description>
-        Restaurant
-    </description>
+    Connecting people for a social cause
+  </description>
   <author email="schettipally@egen.io" href="https://egen.solutions">
-        Egen Solutions
-    </author>
+    Egen Solutions
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-navigation href="*"/>
