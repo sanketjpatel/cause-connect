@@ -8,7 +8,7 @@
     function forgotPasswordConfig($stateProvider) {
         $stateProvider
             .state('causeConnect.forgotPassword', {
-                url: '/signup',
+                url: '/forgot-password',
                 templateUrl: 'features/forgot-password/forgot-password.html',
                 controller: 'ForgotPasswordController',
                 controllerAs: 'forgotVm',
