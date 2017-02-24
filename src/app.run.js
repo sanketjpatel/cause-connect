@@ -49,9 +49,8 @@
                 storageBucket: "cause-connect.appspot.com",
                 messagingSenderId: "786118996913"
             };
-            console.log('initializing firebase');
             firebase.initializeApp(config);
-            console.log('initialized firebase');
+            console.log('Firebase: init');
         }
     }
 }(angular));

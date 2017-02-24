@@ -3,10 +3,10 @@
 
     angular
         .module('causeConnect.signup')
-        .controller('ForgotPasswordController', signupController);
+        .controller('ForgotPasswordController', forgotPasswordController);
 
     // @ngInject
-    function signupController($state) {
+    function forgotPasswordController($state) {
         var forgotVm = this;
 
         forgotVm.submit = submit;

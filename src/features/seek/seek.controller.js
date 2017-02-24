@@ -5,20 +5,11 @@
         .controller('SeekController', seekController);
 
     // @ngInject
-    function seekController($state, eventService, $firebaseAuth) {
+    function seekController(eventService) {
         var vm = this;
 
-        vm.$onInit = $onInit;
         vm.event = {};
         vm.addEvent = addEvent;
-
-        vm.$onInit();
-
-        function $onInit () {
-            if ($firebaseAuth().$getAuth()) {
-                $state.go('causeConnect.login');
-            }
-        }
         
         function addEvent(event) {
             eventService.addEvent(event);

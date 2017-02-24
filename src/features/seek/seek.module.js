@@ -2,19 +2,16 @@
     'use strict';
     angular
         .module('causeConnect.seek', [])
-        .config(tabsConfig);
+        .config(seekConfig);
 
     // @ngInject
-    function tabsConfig($stateProvider) {
+    function seekConfig($stateProvider) {
         $stateProvider
             .state('causeConnect.seek', {
                 url: '/seek',
                 templateUrl: 'features/seek/seek.html',
                 controller: 'SeekController',
-                controllerAs: 'seekVm',
-                data: {
-                    authenticate: false
-                }
+                controllerAs: 'seekVm'
             });
     }
 }(angular));

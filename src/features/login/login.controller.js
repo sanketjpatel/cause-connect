@@ -16,10 +16,8 @@
         function login() {
             firebase.auth().signInWithEmailAndPassword(loginVm.email, loginVm.password)
                 .then(function () {
-                    console.log('logged in');
                     $state.go('causeConnect.seek');
                 }).catch(function(error) {
-                    console.log('alert', error);
                     alert(error.message);
                 });
         }

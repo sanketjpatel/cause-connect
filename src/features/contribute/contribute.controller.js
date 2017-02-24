@@ -3,7 +3,7 @@
 
     angular.module('causeConnect.contribute')
         .controller('ContributeController', contributeController);
-    function contributeController(eventService) {
+    function contributeController(eventService, $firebaseAuth) {
         var vm = this;
 
         init();
@@ -20,7 +20,7 @@
         }
 
         vm.logout = function () {
-
+            $firebaseAuth().$signOut();
         }
     }
 })(angular);
