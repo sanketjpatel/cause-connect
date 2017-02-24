@@ -19,12 +19,13 @@
         // services
         'app.auth',
         'causeConnect.contribute',
-        'causeConnect.tabs',
-        'causeConnect.login',
-        'causeConnect.signup',
-        'causeConnect.seek',
         'causeConnect.events',
-        'causeConnect.eventDetail'
+        'causeConnect.eventDetail',
+        'causeConnect.forgotPassword',
+        'causeConnect.login',
+        'causeConnect.seek',
+        'causeConnect.signup',
+        'causeConnect.tabs'
     ])
         .constant('AvailableLanguages', ['en-US', 'ru-RU', 'el-GR'])
         .constant('DefaultLanguage', 'en-US')
@@ -35,24 +36,6 @@
         .config(function($ionicConfigProvider) {
             $ionicConfigProvider.tabs.position('bottom');
         });
-
-    //function firebaseConfig() {
-    //
-    //    console.log('initializing firebase');
-    //    // Initialize Firebase
-    //    //var config = {
-    //    //    apiKey: "AIzaSyBL8zTJ9rLHv--v83oyeNvE2j0_9vR8iEY",
-    //    //    authDomain: "cause-connect.firebaseapp.com",
-    //    //    databaseURL: "https://cause-connect.firebaseio.com",
-    //    //    storageBucket: "cause-connect.appspot.com",
-    //    //    messagingSenderId: "786118996913"
-    //    //};
-    //    //console.log('initializing firebase');
-    //    //
-    //    //firebase.initializeApp(config);
-    //    //
-    //    //console.log('initialized firebase');
-    //}
 
     function pushConfig($ionicCloudProvider) {
         $ionicCloudProvider.init({

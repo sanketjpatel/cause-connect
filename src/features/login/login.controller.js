@@ -8,7 +8,6 @@
     // @ngInject
     function loginController($state) {
         var loginVm = this;
-        var firebaseRootRef = firebase.database().ref();
 
         loginVm.login = login;
         //loginVm.firebaseObject = $firebaseObject(firebaseRootRef);

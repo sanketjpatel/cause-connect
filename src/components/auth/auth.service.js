@@ -15,6 +15,15 @@
             self.registerForPush = registerForPush;
             self.needsPushRegister = needsPushRegister;
             self.signUpUser = signUpUser;
+            self.authDataCallback = authDataCallback;
+
+            function authDataCallback(authData) {
+                if (authData) {
+                    console.log("User " + authData.uid + " is logged in with " + authData.provider);
+                } else {
+                    console.log("User is logged out");
+                }
+            }
 
 
             function signUpUser(username, password) {

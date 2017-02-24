@@ -3,21 +3,19 @@
 
     angular
         .module('causeConnect.signup')
-        .controller('SignupController', signupController);
+        .controller('ForgotPasswordController', signupController);
 
     // @ngInject
     function signupController($state) {
-        var signupVm = this;
+        var forgotVm = this;
 
-        signupVm.submit = submit;
+        forgotVm.submit = submit;
 
         function submit() {
-            firebase.auth().createUserWithEmailAndPassword(signupVm.email, signupVm.password)
+            firebase.auth().sendPasswordResetEmail(forgotVm.email)
                 .then(function () {
-                    console.log('Signed up');
                     $state.go('causeConnect.login');
                 }).catch(function(error) {
-                    console.log('alert', error);
                     alert(error.message);
                 });
         }

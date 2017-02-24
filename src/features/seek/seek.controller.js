@@ -3,7 +3,9 @@
 
     angular.module('causeConnect.seek')
         .controller('SeekController', seekController);
-    function seekController($state, eventService, AuthService) {
+
+    // @ngInject
+    function seekController($state, eventService, $firebaseAuth) {
         var vm = this;
 
         vm.$onInit = $onInit;
@@ -13,9 +15,7 @@
         vm.$onInit();
 
         function $onInit () {
-
-            // TODO: Check if authenticated
-            if (!AuthService.isAuthenticated()) {
+            if ($firebaseAuth().$getAuth()) {
                 $state.go('causeConnect.login');
             }
         }
