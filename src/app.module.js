@@ -21,7 +21,8 @@
         'causeConnect.tabs',
         'causeConnect.login',
         'causeConnect.seek',
-        'causeConnect.events'
+        'causeConnect.events',
+        'causeConnect.eventDetail'
     ])
         .constant('AvailableLanguages', ['en-US', 'ru-RU', 'el-GR'])
         .constant('DefaultLanguage', 'en-US')

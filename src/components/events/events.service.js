@@ -96,9 +96,7 @@
         }
 
         function findEventById(id) {
-            _.filter(self.events, function(event) {
-                return event.id == id;
-            });
+            return Promise.resolve(_.find(self.events, { 'id': id }));
         }
 
         function getCategorizedEvents() {
