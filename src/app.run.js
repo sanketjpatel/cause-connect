@@ -33,8 +33,24 @@
 
         });
 
+        initializeFirebase();
+
         $window.addEventListener('native.keyboardshow', function(){
             $window.document.body.classList.add('keyboard-open');
         });
+
+
+        function initializeFirebase() {
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBL8zTJ9rLHv--v83oyeNvE2j0_9vR8iEY",
+                authDomain: "cause-connect.firebaseapp.com",
+                databaseURL: "https://cause-connect.firebaseio.com",
+                storageBucket: "cause-connect.appspot.com",
+                messagingSenderId: "786118996913"
+            };
+            firebase.initializeApp(config);
+            console.log('Firebase: init');
+        }
     }
 }(angular));

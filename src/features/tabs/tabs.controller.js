@@ -5,7 +5,7 @@
             .controller('TabsController', TabsController);
 
         // @ngInject
-        function TabsController($window, AuthService, $state, $ionicPush, $ionicTabsDelegate) {
+        function TabsController($window, $state, $ionicPush, $ionicTabsDelegate) {
             var tabsVm = this;
 
             tabsVm.indexStateMap = [

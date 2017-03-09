@@ -1,7 +1,7 @@
 (function(angular) {
     'use strict';
     angular
-        .module('causeConnect.login', [])
+        .module('causeConnect.login', ['firebase'])
         .config(tabsConfig);
 
     // @ngInject
@@ -9,7 +9,7 @@
         $stateProvider
             .state('causeConnect.login', {
                 url: '/login',
-                templateUrl: 'features/seek/login/login.html',
+                templateUrl: 'features/login/login.html',
                 controller: 'LoginController',
                 controllerAs: 'loginVm',
                 data: {

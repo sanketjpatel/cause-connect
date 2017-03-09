@@ -7,6 +7,7 @@
         'ionic.service.core', // needed for ionic analytics
         'ionic.service.analytics',
         'ionic.cloud',
+        'firebase',
         'ngCordova',
         'tmh.dynamicLocale',
         'pascalprecht.translate',
@@ -18,11 +19,13 @@
         // services
         'app.auth',
         'causeConnect.contribute',
-        'causeConnect.tabs',
+        'causeConnect.events',
+        'causeConnect.eventDetail',
+        'causeConnect.forgotPassword',
         'causeConnect.login',
         'causeConnect.seek',
-        'causeConnect.events',
-        'causeConnect.eventDetail'
+        'causeConnect.signup',
+        'causeConnect.tabs'
     ])
         .constant('AvailableLanguages', ['en-US', 'ru-RU', 'el-GR'])
         .constant('DefaultLanguage', 'en-US')
@@ -74,13 +77,10 @@
             });
 
         $urlRouterProvider.otherwise(function ($injector, $location) {
-            var user = false;
             var state = $injector.get('$state');
-            if (user) {
-                // go to home
-            } else {
-                state.go('causeConnect.contribute');
-            }
+
+            state.go('causeConnect.contribute');
+
             return $location.path();
         });
     }
