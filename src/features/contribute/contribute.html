@@ -40,10 +40,9 @@
                 <p>Organized By: {{event.organizer}}</p>
                 <p>On: {{event.date}} @ {{event.address}}</p>
             </ion-item>
-            <img src="{{event.heroUrl}}" class="img-responsive" alt="{{event.name}}">
+            <a href="#/causeConnect/contribute/{{event.id}}/event-detail"><img src="{{event.heroUrl}}" class="img-responsive" alt="{{event.name}}">
             <ion-card-content>
                 <div class="metadata">
-                    <p>{{event.description}}</p>
                     <p>
                         Visit Us: <a href="{{event.website}}" target="_blank">{{event.website}}</a>
                     </p>

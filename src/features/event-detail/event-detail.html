@@ -1,0 +1,30 @@
+<ion-view class="contribute" view-title="Event Detail">
+    <ion-content class="padding card-background-page">
+        <ion-card>
+            <ion-card-header>
+                <h1>{{edVm.event.name}}</h1>
+            </ion-card-header>
+            <ion-card-content>
+                <p class="welcome-info">
+                    {{edVm.event.description}}
+                </p>
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="event-list">
+            <ion-item class="info">
+                <h1 ng-click="detailsPage()">{{edVm.event.name}}</h1>
+                <p>Organized By: {{edVm.event.organizer}}</p>
+                <p>On: {{edVm.event.date}} @ {{edVm.event.address}}</p>
+            </ion-item>
+            <img src="{{edVm.event.heroUrl}}" class="img-responsive" alt="{{edVm.event.name}}">
+            <ion-card-content>
+                <div class="metadata">
+                    <p>{{edVm.event.description}}</p>
+                    <p>
+                        Visit Us: <a href="{{edVm.event.website}}" target="_blank">{{edVm.event.website}}</a>
+                    </p>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+</ion-view>
